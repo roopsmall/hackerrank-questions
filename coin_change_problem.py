@@ -1,13 +1,13 @@
 total, num_coins = [int(i) for i in raw_input().split()]
 if num_coins:
-	coins = [int(i) for i in raw_input().split()]
+	coins = [long(i) for i in raw_input().split()]
 upper_bound = [total/coin_val + 1 for coin_val in coins]
 accepted_configurations = 0
 normalisers = upper_bound + [1]
 
 
 def prod(x):
-	return reduce(lambda a, b: a * b, x + [1])
+	return reduce(lambda a, b: long(a) * long(b), x + [1])
 
 if num_coins == 0 or total == 0:
 	print 0
